@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+}
+header > nav {
+    display: inline-block;
+    font-size: larger;
+    word-spacing:35px;
+    margin-left: 10px;
+}
+.A{
+    border: none;
+    font-size: large;
+}
+#SK{
+    margin-left: 1050px;
+}
+#KS{
+    margin-left: 15px;
+}
+.L{
+    margin-left: 5px;
+}

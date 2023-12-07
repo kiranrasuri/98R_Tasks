@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Registration,form">
+    <meta name="description" content="Registration page">
+    <meta name="author" content="Kiran">
+    <title>Document</title>
+    <style>
+        input:required{
+            background-color: rgba(251, 8, 8, 0.2);
+        }
+        address:hover{
+            font-size: 30px;
+            color: rgb(168, 84, 84);
+        }
+        option:nth-child(odd){
+            background-color: yellowgreen;
+        }
+        input:optional{
+            background-color: rgb(150, 216, 241, 0.3);
+        }
+        input:focus{
+            background-color: rgba(132, 49, 234, 0.3);
+        }
+        input:checked{
+            height: 40px;
+            width: 50px;
+        }
+        p:empty{
+            background: red;
+            width: 400px;
+            height: 5px;
+        }
+        input:in-range{
+            border: 5px solid rgb(57, 220, 57, 0.5);
+        }
+        #email:valid{
+            background-color: rgba(174, 255, 0, 0.3);
+        }
+        a:visited{
+            color: red;
+        }
+        a:active{
+            color: blueviolet;
+        }
+        .A:hover{
+            font-size: 20px;
+            background-color: rgb(137, 68, 202, 0.2);
+        }
+        address::after{
+            content: "Remember This";
+            font-weight: bolder;
+            color: red;
+            background-color: yellow;
+        }
+        address::before{
+            content: "My adress-";
+            font-weight: bolder;
+            color: red;
+            background-color: yellow;
+        }
+        address::first-letter{
+            font-size: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 5px;
+        }
+        p::first-line{
+            font-variant:small-caps;
+            color: aquamarine;
+            background-color: black;
+        }
+        p::selection{
+            color: white;
+            background-color: black;
+        }
+        li::marker{
+            color: blueviolet;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Registration Form</legend>
+            <label for="Fname">First Name</label> &nbsp; &nbsp; &nbsp;
+            <input type="text" placeholder="First Name" name="Fname" id="Fname" pattern="[a-zA-Z]{0,9}" required>
+            <br><br>
+            <label for="Lname">Last Name</label>  &nbsp; &nbsp;  &nbsp;
+            <input type="text" placeholder="Last Name" name="Lname" id="Lname" pattern="[a-zA-Z]{0,9}" autocomplete="on" required>
+            <br><br>
+            <label for="cnumb">Phone Number</label> 
+            <input type="tel" name="numb" placeholder="Contact Number" id="cnumb" pattern="[0-9]{10}" required autocomplete="on">
+            <br><br>
+            <label for="email">E-mail id</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="email" placeholder="E-mail" name="email" id="email" required autocomplete="on">
+            <br><br>
+            <label for="age">Age</label> &nbsp; &nbsp; &nbsp;
+            <input type="number" placeholder="Age" name="age" id="age" min="18" max="120">
+            <br><br>
+            <label for="DOB">Date of Birth</label> &nbsp; &nbsp;
+            <input type="date" name="DOB" id="DOB" min="1982-01-01" max="2008-01-01" >
+            <br><br>
+            <label for="color">Select Colour</label> &nbsp; &nbsp;
+            <input type="color" name="color" id="color">
+            <br><br>
+            <label for="File">Resume/CV</label> &nbsp; &nbsp; &nbsp;
+            <input type="file" name="file" id="File">
+            <br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <br><br>
+            <label for="check">Languages known</label>
+            <input type="checkbox" name="check" id="tel" value="Telugu">
+            <label for="tel">Telugu</label>
+            <input type="checkbox" name="check" id="eng" value="English">
+            <label for="eng">English</label>
+            <input type="checkbox" name="check" id="hin" value="Hindi">
+            <label for="hin">Hindi</label>
+            <br><br>
+            <label for="range">Range</label> &nbsp; &nbsp; &nbsp;
+            <input type="range" id="range" name="range" min="0" max="100" step="10">
+            <br><br>
+            <label for="url">Social account</label>
+            <select name="Socialacount" id="Sacount">
+                <optgroup label="Social accounts">
+                <option value="" >from</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Linkedin">Linkedin</option>
+                <option value="GitHub">GitHub</option>
+                <option value="Instagram">Instagram</option>
+                </optgroup>
+            </select>
+            <input type="url" name="url" id="url" placeholder="Enter Url">
+            <br><br>
+            <label for="country">Country</label>
+            <input list="country" name="country">
+            <datalist id="country" >
+                <option value=""></option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="Srilanka">Srilanka</option>
+                <option value="Russia">Russia</option>
+                <option value="UK">UK</option>
+            </datalist>
+            <br><br>
+            <label for="msg">Send Message</label> &nbsp; &nbsp;
+            <textarea name="Msg" id="msg" cols="30" rows="1" maxlength="200"></textarea>
+            <br><br>
+            <input type="search" placeholder="search..">
+            <br><br>
+            <input type="reset" class="A"> &nbsp; &nbsp;
+            <input type="submit" class="A">
+        </fieldset>
+        <fieldset>
+            <legend>Other Types</legend>
+            <button type="button">
+                <img 
+                src="../images/suitcase.png"
+                width="50px"
+                height="50px"
+                alt="button">
+            </button> <br>
+            <a href="https://www.w3schools.com/html/">-KIRAN RASURI</a>
+            <br>
+            <meter value="8" min="0" max="10"></meter>
+            <address>
+                Moosamahal
+                Hyderabad 
+            </address>
+            <ul>
+                <li>Hyderabad</li>
+                <li>Telangana</li>
+            </ul>
+            <p></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quaerat ipsum labore asperiores dolorum ullam inventore iusto voluptates laudantium architecto, excepturi tenetur rem facilis earum obcaecati atque velit animi harum.</p>
+        </fieldset>
+    </form>
+</body>
+</html>

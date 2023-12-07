@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(254, 234, 210);
+        }
+        p{
+            margin-left: 25px;
+        }
+        h3,h5{
+            color: red;
+        }
+        section > pre{
+            color: blue;
+        }
+        h1,h2{
+            color: rgb(42, 165, 69, 0.9);
+            background-color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center>
+            <h1>CSS_SELECTORS</h1>
+        </center>
+    </header>
+    <section>
+        <h3>
+            Element Selector:
+        </h3>
+        <p>
+            The element selector selects HTML elements based on the element name.
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>       p {
+            text-align: center;
+            color: red;
+          }</pre>
+        <p>
+            Here, all  elements on the page will be center-aligned, with a red text color.
+        </p>
+        <h3>
+            Class selector:
+        </h3>
+        <p>
+            The class selector selects HTML elements with a specific class attribute.<br>
+            To select elements with a specific class, write a period (.) character, followed by the class name.
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>       p.center {
+                  text-align: center;
+                  color: red;
+                }</pre>
+        <p>
+            In this example only "p" elements with class="center" will be red and center-aligned.
+        </p>
+        <h3>
+            ID Selector:
+        </h3>
+        <p>
+            The id selector uses the id attribute of an HTML element to select a specific element.<br>
+            The id of an element is unique within a page, so the id selector is used to select one unique element!<br>
+            To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>       #para1 {
+               text-align: center;
+               color: red;
+              }</pre>
+        <p>
+            Here, all "p" elements on the page will be center-aligned, with a red text color
+        </p>
+        <h3>
+            Universal Selector:
+        </h3>
+        <p>
+            The universal selector (*) selects all HTML elements on the page.
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>       * {
+            text-align: center;
+            color: blue;
+          }</pre>
+        <p>
+            The CSS rule below will affect every HTML element on the page
+        </p>
+        <h3>
+            Group Selector:
+        </h3>
+        <p>
+            The grouping selector selects all the HTML elements with the same style definitions.<br>
+            Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>         h1, h2, p {
+                     text-align: center;
+                     color: red;
+                    }</pre>
+        <p>
+            t will be better to group the selectors, to minimize the code.<br>  
+            To group selectors, separate each selector with a comma.<br>
+            In this example we have grouped the selector.
+        </p>
+        <h3>
+            Element.Class Selector:
+        </h3>
+        <p>
+            The element.class selector is used to select the specified element with the the specified class.
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>         p.intro {
+                  background-color: yellow;
+                 }</pre>
+        <p>
+            Select and style every "p" element with the class "intro".
+        </p>
+    </section>
+    <section>
+        <h2>
+            CSS COMBINATORS:
+        </h2>
+        <p>
+            A combinator is something that explains the relationship between the selectors.
+        </p>
+        <p>
+            A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.<br>
+            There are four different combinators in CSS:
+            <ul>
+            <li>descendant selector (space)</li>
+            <li>child selector (>)</li>
+            <li>adjacent sibling selector (+)</li>
+            <li>general sibling selector (~)</li>
+            </ul>
+        </p>
+        <h3>
+            Descendant Selector:
+        </h3>
+        <p>
+            The descendant selector matches all elements that are descendants of a specified element. <br>
+            The following example selects all p elements inside div elements: 
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>
+            div p {
+                background-color: yellow;
+              }
+        </pre>
+        <h3>
+            Child Selector:
+        </h3>
+        <p>
+            The child selector selects all elements that are the children of a specified element. <br>
+            The following example selects all p elements that are children of a div element:
+        </p>
+        <h5>
+            Example:
+        </h5>
+        <pre>
+            div > p {
+                background-color: yellow;
+              }
+        </pre>
+    </section>
+</body>
+</html>
