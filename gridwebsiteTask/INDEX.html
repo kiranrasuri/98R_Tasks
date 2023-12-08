@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+<style>
+    body{
+        background-color: rgba(0, 0, 0, 0.369);
+        overflow-x: hidden;
+    }
+    .hi{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 90px 650px 250px;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    header{
+        /* height: 50px; */
+        /* border: 2px solid black; */
+        grid-column: 1/4;
+        background-color: white;
+        position: sticky;
+        top: 0;
+    }
+    .hm{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto 100px;
+        margin-top: 15PX;
+        margin-top: 35px;
+    }
+    .A{
+        margin-left: 150px;
+        position: relative;
+    }
+    .B{
+        margin-left: 50px;
+        position: relative;
+      display: inline-block;
+    }
+    button{
+        border: none;
+        background-color: white;
+    }
+    #search-bar {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%; 
+      margin-left: -10px; 
+    }
+
+    .B:hover #search-bar {
+      display: block;
+    }
+    .C{
+        margin-left: 700px;
+    }
+    .D, .E, .F{
+        margin-left: 55px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        font-size: 17px;
+    }
+    .G>img{
+        transform: translate(80px, -20px);
+        border-right: 6px solid yellow;
+    }
+
+    /* ---------------------------------------------------------------------------- */
+    aside{
+        /* padding: 15px; */
+        /* border: 2px solid black; */
+        grid-column: 1/3;
+        margin-top: 5px;
+        background-color: white;
+    }
+    section{
+        padding: 15px;
+        /* border: 2px solid black; */
+        grid-column: 3/4;
+        margin-top: 5px;
+        background-color: white;
+        margin-left: 5px;
+    }
+    footer{
+        padding: 15px;
+        /* border: 2px solid black; */
+        grid-column: 1/4;
+        margin-top: 5px;
+        background-color: white;
+       
+    }
+    .R{
+        margin-top: 80px;
+        background-color: rgb(209, 209, 29);
+        width: 65%;
+        height: 40%;
+    }
+    .R>h3{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 35px;
+        margin-left: 105px;
+        position: absolute;
+        margin-top: 80px;
+    }
+    h4{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        margin-left: 109px;
+        position: absolute;
+    }
+    #H{
+        margin-top: 140px;
+    }
+    #P{
+        margin-top: 170px;
+    }
+    #RS{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 400px;
+        margin-top: -98px;
+        margin-left: 360px;
+    }
+    #RS,#car,#car2{
+        position: absolute;
+    }
+    #car{
+        width: 70%;
+        margin-left: 170px;
+        margin-top: 10px;
+        transform: rotate(-2deg);
+    }
+    #car2{
+         width: 300px;
+        margin-left: 240px;
+        top: 530px;
+        transform: rotate(-2deg);
+    }
+    #DS{
+        background-color: rgba(205, 22, 22, 0.8);
+        width: 28%;
+        border-radius:  10px 105px;
+        height: 100%;
+        margin-left: 18%;
+        filter: drop-shadow(25px 30px 25px black);
+    }
+    .I, .clio, .IO{
+        font-size: 30px;
+        position: absolute;
+    }
+    .I{
+        color: black;
+        top: 190px;
+        margin-left: 150px;
+        filter: drop-shadow(-9px 3px 10px  rgb(248, 241, 241));
+    }
+    .I:hover{
+        filter: drop-shadow(-9px 3px 5px  rgb(248, 241, 241));
+        font-size: 28px;
+    }
+    .I::first-letter{
+        font-size: 69px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .clio{
+        width: 25%;
+        top: 180px;
+        margin-left: 180px;
+    }
+    .IO{
+        color: black;
+        top: 490px;
+        margin-left: 150px;
+        filter: drop-shadow(-9px 3px 10px  rgb(248, 241, 241));
+    }
+    .IO::first-letter{
+        font-size: 69px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .IO:hover{
+        filter: drop-shadow(-9px 3px 5px  rgb(248, 241, 241));
+        font-size: 28px;
+    }
+    .stick{
+        position: absolute;
+        position: fixed;
+        width: 97.6%;
+        height: 95%;
+        border: 22px solid rgb(63, 106, 181);
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+    }
+    .F1{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        text-align: center;
+    }
+    .F2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-left: 4px solid rgba(0, 0, 0, 0.369);
+        border-right: 4px solid rgba(0, 0, 0, 0.369) ;
+
+    }
+    .F2>div{
+        /* border-left: 2px solid rgba(82, 80, 80, 0.623);
+        border-right: 2px solid rgba(82, 80, 80, 0.623); */
+        transform: translateY(-50px);
+        /* height: 45px; */
+    }
+    h6{
+        font-size: 26px;
+        height: 10px;
+        text-decoration: overline solid rgba(255, 247, 0, 0.468) 8px;
+    }
+</style>
+</head>
+<body>
+    <!-- <div class="stick"></div> -->
+    <div class="hi">
+        <header>
+            <div class="hm">
+                <div class="A">
+                    <a href="">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4849/4849108.png" width="20px" alt="">
+                    </a>
+                </div>
+                <div class="B">
+                    <button type="button">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/magnifier-glass-icon.png" width="20px" alt="">
+                    </button>
+                    <input type="text" id="search-bar" placeholder="search">
+                </div>
+                <div class="C">
+                    <a href="">
+                        <img src="https://static-00.iconduck.com/assets.00/line-horizontal-3-icon-2048x1472-w7kzp4f5.png" width="16px" alt="">
+                    </a>
+                </div>
+                <div class="D">
+                    <a href="">
+                       <b>Renault Range</b>
+                    </a>
+                </div>
+                <div class="E">
+                    <a href="">
+                        <b>About</b>
+                     </a>
+                </div>
+                <div class="F">
+                    <a href="">
+                        <b>Promotions</b>
+                     </a>
+                </div>
+                <div class="G">
+                    <img src="./images/renault.png" width="130px" alt="">
+                </div>
+            </div>
+        </header>
+        <aside>
+            <div class="R">
+                <h2 id="RS">RS</h2>
+                <h3>Renault Megane</h3>
+                <h4 id="H">280hp of exhilaration for</h4>
+                <h4 id="P">your everyday drive.</h4>
+                <img src="https://www.renaultgroup.com/wp-content/uploads/2023/03/a110-1.png" id="car" alt="">
+            </div>
+        </aside>
+        <section>
+            <div id="DS">
+            </div>
+            <a href="" class="I"> Renault Clio</a>
+            <img src="https://pngimg.com/d/renault_PNG56.png" width="200px" class="clio" alt="">
+            <a href="" class="IO">Scenic Renault</a>
+            <img src="https://www.pngkey.com/png/full/813-8139031_renault-png-renault-cars.png" id="car2" alt="">
+        </section>
+        <footer>
+            <div class="F1">
+                <div></div>
+                <div class="F2">
+                    <div>
+                        <h6>280 hp</h6>
+                        <p>Engine power</p>
+                    </div>
+                    <div>
+                        <h6>1.8 L</h6>
+                        <p>Engine capacity</p>
+                    </div>
+                    <div>
+                        <h6>180 km/h</h6>
+                        <p>Max speed</p>
+                    </div>
+                    <div>
+                        <h6>5.8s</h6>
+                        0-100 km/h
+                    </div>
+                    <div>
+                        <h6>
+                            340Nm
+                        </h6>
+                        <p>Engine torque</p>
+                    </div>
+                </div>
+                <div>4</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
